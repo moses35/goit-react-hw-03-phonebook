@@ -4,7 +4,7 @@ import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
 import { Container } from 'components/App/App.styled';
 import { nanoid } from 'nanoid';
-import initialContacts from 'InitialContacts.json';
+import initialContacts from 'initialContacts.json';
 
 export class App extends Component {
   state = {
