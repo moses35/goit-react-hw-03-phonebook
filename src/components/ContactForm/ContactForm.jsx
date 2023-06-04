@@ -22,8 +22,8 @@ const contactSchema = yup.object().shape({
 });
 
 export const ContactForm = ({ onSubmit }) => {
-  const InputName = nanoid();
-  const InputNumber = nanoid();
+  const inputName = nanoid();
+  const inputNumber = nanoid();
 
   return (
     <Formik
@@ -38,11 +38,11 @@ export const ContactForm = ({ onSubmit }) => {
       validationSchema={contactSchema}
     >
       <Form autoComplete="off">
-        <label htmlFor={InputName}>Name</label>
-        <Field type="text" name="name" id={InputName} />
+        <label htmlFor={inputName}>Name</label>
+        <Field type="text" name="name" id={inputName} />
         <ErrorMessage component="span" name="name" />
-        <label htmlFor={InputNumber}>Number</label>
-        <Field type="tel" name="number" id={InputNumber} />
+        <label htmlFor={inputNumber}>Number</label>
+        <Field type="tel" name="number" id={inputNumber} />
         <ErrorMessage component="span" name="number" />
         <button type="submit">Add contact</button>
       </Form>
